@@ -1,0 +1,411 @@
+
+
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/pure/2.0.3/pure.min.css">
+<meta name="keywords" content="B with U">
+<meta charset="UTF-8">
+<title>B with U</title>
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js/dist/video.js"></script>
+<script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<meta name="viewport" content="width=440,user-scalable=no">
+<style>
+        body {font-family: Arial, Helvetica, sans-serif;color: #6A6B6F;text-align: center;/* padding-top: 17px; *//* width: 450px; */margin: 0 auto;} h1 {/* font-size: 36px; */} h2 { font-size: 24px; } p { font-size: 18px; } #skPlayer {margin: 1px auto 0; .container { margin-top: 200px; } .doc { text-align: left; } pre { padding-left: 2em; font-size: 16px; line-height: 24px; color: #fff; background-color: #272822; border-radius: 3px; } @media screen and (max-width: 768px) { body { width: 100%; } .doc { display: none; } }
+    </style>
+</head>
+<body>
+<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0OTUyNTA2Mw==&scene=123#wechat_redirect" style="font-size: 1.17em; font-weight: bold; padding:0; color: #777; text-decoration: none;"><h1>B with U</h1></a>
+<div id="skPlayer"></div>
+<div class="pure-menu custom-restricted-width">
+    <!--<span class="pure-menu-heading" style="font-size: 1.17em; font-weight: bold;color: #6A6B6F;">专辑列表</span>-->
+    <ul class="listimg pure-menu-list">
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(1)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(2)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png"></a><img</li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(3)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(4)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(5)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(6)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(7)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(8)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(9)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(10)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(11)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/爵士乐与不插电/爵士乐与不插电.jpg"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(12)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(13)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(14)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(15)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(16)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(17)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(18)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(19)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(20)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(21)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(22)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png"></a></li>
+    <li class=""><a href="#" class="pure-menu-link" onclick="change(23)"><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png"></a></li>
+    <li class=""><a href="https://support.qq.com/product/467468" class="pure-menu-link" ><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/小程序/hi.png"></a></li>
+    <li class=""><a href="https://mp.weixin.qq.com/s/KA71AVm5mnQaEACyl3MF0A" class="pure-menu-link" ><img class="listimg2" src="https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/小程序/小程序.png"></a></li>
+    </ul>
+    </div>
+<style>.listimg{height: 396px;margin-top: 184px;width: 386px;} .listimg ul{ list-style: none; margin: 0;} .listimg li{display: inline;float:left;margin:0;width: 77.2px;height: 77.2px;} .listimg2{width: 72px;height: 72px;} .pure-menu-link { padding: 5px 0 0 0;  height: 77.5px;width: 77.5px;} 
+    #skPlayer {background-color:transparent;}#skPlayer .skPlayer-list {background-color:transparent;}.pure-menu {margin: 0  auto;width: 386px;}  
+    #bblyric{text-align: left;margin: 0px auto;color: #777;width: 386px;} #bbtrack{text-align:right;margin: 0 auto;width: 386px;} .darkmode-toggle{top: 0px;right: 0px;}.darkmode-layer--button {top: -0px;right: 0px;}
+    </style>
+
+<div id="bblyric">
+    <span id="lyric">loading...</span>
+    </div>
+    <div id="bbtrack" >
+        <span>——《</span>
+        <span id="track" style="text-align:right;">loading...</span>
+        <span>》</span>
+    </div>
+    <br />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "get",
+            url: 'bb.json',
+            async: false,
+            dataType: "json",
+            success: function (data) {
+                var number_of_lyric = 33;
+                var i = Math.floor(Math.random() * number_of_lyric);
+                obj = eval (data);
+                document.getElementById("lyric").innerHTML=obj.Lizhi[i].lyric 	
+                document.getElementById("track").innerHTML=obj.Lizhi[i].track
+                //document.getElementById("playAddr").innerHTML=obj.Lizhi[i].playAddr
+                //document.getElementById("playAddr").href=obj.Lizhi[i].playAddr
+            }
+        });
+    });
+    </script>
+
+<!--<span class="" ><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0OTUyNTA2Mw==&scene=123#wechat_redirect" class=""style="font-size: 1.17em; font-weight: bold; padding:0; color: #777; text-decoration: none; white-space: nowrap;    display: block;" >公众号:民谣俱乐部</a></span>
+<span class="" ><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0OTUyNTA2Mw==&scene=123#wechat_redirect" class=""style="font-size: 1.17em; font-weight: bold; padding:0; color: #777;    text-decoration: none; white-space: nowrap;    display: block;" >祝你生活愉快</a></span>-->
+
+
+<script src="https://gcore.jsdelivr.net/gh/liveeeee/lizhi@main/skPlayer.min.js"></script>
+<canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+<script>
+    let songList1 = [{  name: "和你在一起", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", },{ name: "下雨", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/下雨.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", },{ name: "墙上的向日葵", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/墙上的向日葵.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "妈妈", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/妈妈.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "山阴路的夏天", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/山阴路的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "1990年的春天", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/1990年的春天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "意味", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/意味.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "斜", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/斜.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "春末的南方城市", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "来了", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/来了.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "离婚", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/离婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "秋天的老狼", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/秋天的老狼.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "翁庆年的六英镑", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/翁庆年的六英镑.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "董卓瑶", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "被禁忌的游戏", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/被禁忌的游戏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "这个世界会好吗", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "铅笔", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/铅笔.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "门", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/门.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", }, { name: "黑色信封", author: "勾三搭四", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/勾三搭四/cover2.png", },
+  ];
+    let songList2 = [{ name: "不多", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/不多.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "大象", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/大象.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "好威武支持有希望", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/好威武支持有希望.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "定西", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/定西.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "方式", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/方式.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "热河", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/热河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "看见", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/看见.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", }, { name: "鼠说", author: "1701", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/鼠说.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/1701/cover2.png", },
+  ];
+    let songList3 = [{ name: "Hey Jude", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/Hey Jude.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "兰花草", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/兰花草.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "小螺号", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/小螺号.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "数鸭子", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/数鸭子.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "朋友越多越快乐", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/朋友越多越快乐.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "歌声与微笑", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/歌声与微笑.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "蜗牛与黄鹂鸟", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/蜗牛与黄鹂鸟.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "送别", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/送别.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", }, { name: "采蘑菇的小姑娘", author: "8", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/采蘑菇的小姑娘.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/8/cover2.png", },
+  ];
+    let songList4 = [{ name: "下雨", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/下雨.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "你的早晨", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/你的早晨.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "女神", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/女神.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "寻找", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/寻找.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "尽头", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/尽头.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "山阴路的夏天", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/山阴路的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "日", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/日.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "杭州", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/杭州.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", }, { name: "门", author: "F", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/门.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/F/cover2.png", },
+  ];
+    let songList5 = [{ name: "1990的春天", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/1990的春天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "Z结尾", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/Z结尾.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "关于郑州的记忆", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/关于郑州的记忆.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "和你在一起", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "喀纳斯", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/喀纳斯.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "天空之城", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/天空之城.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "女神", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/女神.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "她", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/她.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "家乡", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/家乡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "寻找", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/寻找.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "尽头", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/尽头.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "我们不能失去信仰", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/我们不能失去信仰.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "斜", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/斜.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "杭州", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/杭州.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "海的女儿", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/海的女儿.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "离婚", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/离婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "秋天的老狼", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/秋天的老狼.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "红色气球", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/红色气球.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "结婚", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/结婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "翁庆年的六英镑", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/翁庆年的六英镑.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "苍井空", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/苍井空.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "被禁忌的游戏", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/被禁忌的游戏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "门", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/门.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", }, { name: "青春", author: "IMAGINE", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/青春.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/Imagine-2011/cover2.png", },
+  ];
+    let songList6 = [{ name: "墙上的向日葵", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/墙上的向日葵.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "妈妈", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/妈妈.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "定西", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/定西.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "山阴路的夏天", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/山阴路的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "方式", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/方式.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "来了", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/来了.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "杭州", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/杭州.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "这个世界会好吗", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", }, { name: "铅笔", author: "io", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/铅笔.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/io/cover2.png", },
+  ];
+    let songList7 = [{ name: "他们", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/他们.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "倒影", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/倒影.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "冬妮娅", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/冬妮娅.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "听妈妈讲过去的事情", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/听妈妈讲过去的事情.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "天空之城", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/天空之城.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "妈妈", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/妈妈.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "家乡", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/家乡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "广场", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/广场.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "恋恋风尘", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/恋恋风尘.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "意味", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/意味.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "春末的南方城市", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "来了", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/来了.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "来自我心", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/来自我心.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "狐狸", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/狐狸.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "结婚", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/结婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "苍井空", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/苍井空.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "董卓瑶", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "虎口脱险", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/虎口脱险.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "被禁忌的游戏", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/被禁忌的游戏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "达摩流浪者", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/达摩流浪者.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "这个世界会好吗", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "陀螺", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/陀螺.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "青春", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/青春.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "鸟语", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/鸟语.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "鸵鸟", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/鸵鸟.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", }, { name: "黑色信封", author: "二零零九年十月十六日事件", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/二零零九年十月十六日事件/cover2.png", },
+  ];
+    let songList8 = [{ name: "关于郑州的记忆", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/关于郑州的记忆.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "墙上的向日葵", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/墙上的向日葵.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "夜", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/夜.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "她", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/她.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "带亲", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/带亲.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "忽然", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/忽然.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "秋天的老狼", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/秋天的老狼.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "路", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/路.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "铅笔", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/铅笔.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", }, { name: "铅笔(吉松浩版)", author: "你好，郑州", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/铅笔(吉松浩版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/你好，郑州/cover2.png", },
+  ];
+    let songList9 = [{ name: "你的早晨", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/你的早晨.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "卡夫卡", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/卡夫卡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "和你在一起", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "墙上的向日葵", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/墙上的向日葵.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "定西", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/定西.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "尽头", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/尽头.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "忽然", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/忽然.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "普希金", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/普希金.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", }, { name: "这个世界会好吗", author: "动静", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/动静/cover2.png", },
+  ];
+    let songList10 = [{ name: "倒影", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/倒影.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "尽头", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/尽头.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "山阴路的夏天", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/山阴路的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "忽然", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/忽然.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "董卓瑶", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "阿兰", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/阿兰.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }, { name: "青春", author: "108个关键词", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/青春.flac", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/108个关键词/cover2.png", }
+  ];
+    let songList11 = [  { name: "一个夜晚 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/一个夜晚 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "关于郑州的记忆 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/关于郑州的记忆 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "卡夫卡 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/卡夫卡 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "死人 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/死人 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "热河 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/热河 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "爱 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/爱 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "看见 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/看见 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "离婚 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/离婚 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "翁庆年的六英镑 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/翁庆年的六英镑 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "董卓瑶 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/董卓瑶 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "鸵鸟 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/鸵鸟 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "鼠说 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/鼠说 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", },
+  ];
+    let songList12 = [{ name: "关于郑州的记忆", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/关于郑州的记忆.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "大象", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/大象.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "定西", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/定西.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "山阴路的夏天", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/山阴路的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "春末的南方城市", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "杭州", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/杭州.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "热河", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/热河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "结婚", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/结婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "这个世界会好吗", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "鸵鸟", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/鸵鸟.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "黑色信封", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", }, { name: "鼠说", author: "北京不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/鼠说.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/北京不插电/cover2.png", },
+  ];
+    let songList13 = [{ name: "一个夜晚", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/一个夜晚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "一头偶像", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/一头偶像.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "你好明天", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/你好明天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "克兰河", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/克兰河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "哦吼", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/哦吼.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "在每一条伤心的应天大街上", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/在每一条伤心的应天大街上.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "彩色派对", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/彩色派对.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", }, { name: "死人", author: "在每一条伤心的应天大街上", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/死人.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/在每一条伤心的应天大街上/cover2.png", },
+  ];
+    let songList14 = [{ name: "九月", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/九月.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "他们", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/他们.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "卡夫卡", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/卡夫卡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "和你在一起", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "想起了他", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/想起了他.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "春末的南方城市", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "暧昧", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/暧昧.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "月亮代表我的心", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/月亮代表我的心.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "来了", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/来了.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "红色气球", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/红色气球.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "董卓瑶", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "被禁忌的游戏", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/被禁忌的游戏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "这个世界会好吗", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "阿兰", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/阿兰.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "青春", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/青春.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", }, { name: "黑色信封", author: "工体东路没有人", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/工体东路没有人/cover2.png", },
+  ];
+    let songList15 = [{ name: "1990年的春天", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/1990年的春天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "倒影", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/倒影.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "再见", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/再见.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "冬妮娅", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/冬妮娅.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "听妈妈讲那过去的事情", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/听妈妈讲那过去的事情.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "在那遥远的地方", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/在那遥远的地方.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "天空之城", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/天空之城.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "家乡", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/家乡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "思念观世音", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/思念观世音.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "意味", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/意味.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "爱", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/爱.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "米店", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/米店.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "结婚", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/结婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "美丽的梭罗河", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/美丽的梭罗河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "苍井空", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/苍井空.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", }, { name: "鸵鸟", author: "我爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/鸵鸟.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我爱南京/cover2.png", },
+  ];
+    let songList16 = [{ name: "1990年的春天", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/1990年的春天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "他们、新年好", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/他们、新年好.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "关于郑州的记忆", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/关于郑州的记忆.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "她、鹿港小镇", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/她、鹿港小镇.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "开场", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/开场.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "春末的南方城市", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", }, { name: "翁庆年的六英镑", author: "我们也爱南京", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/翁庆年的六英镑.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/我们也爱南京/cover2.png", },
+  ];
+    let songList17 = [{ name: "你离开了南京，从此没有人和我说话", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/你离开了南京，从此没有人和我说话.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "广场", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/广场.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "想起了她", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/想起了她.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "斜", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/斜.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "春末的南方城市", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "暧昧", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/暧昧.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "来了", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/来了.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "梵高先生", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/梵高先生.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", }, { name: "董卓瑶", author: "梵高先生", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/梵高先生/cover2.png", },
+  ];
+    let songList18 = [{ name: "和你在一起", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "回答", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/回答.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "墙上的向日葵", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/墙上的向日葵.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "大象", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/大象.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "定西", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/定西.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "尽头", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/尽头.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "序曲", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/序曲.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "春末的南方城市", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "杭州", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/杭州.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "铅笔", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/铅笔.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "门", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/门.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", }, { name: "黑色信封", author: "电声与管弦乐", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐/cover2.png", },
+  ];
+    let songList19 = [{ name: "一头偶像 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/一头偶像 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "你好明天 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/你好明天 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "哦吼 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/哦吼 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "天空之城 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/天空之城 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "家乡 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/家乡 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "寻找 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/寻找 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "山阴路的夏天 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/山阴路的夏天 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "相信未来序曲 (乐曲)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/相信未来序曲 (乐曲).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", }, { name: "这个世界会好吗 (相信未来版)", author: "电声与管弦乐II", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/这个世界会好吗 (相信未来版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/电声与管弦乐II/cover2.png", },
+  ];
+    let songList20 = [{ name: "下雨", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/下雨.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "你离开了南京，从此没有人和我说话", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/你离开了南京，从此没有人和我说话.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "春末的南方城市", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/春末的南方城市.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "梵高先生", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/梵高先生.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "热河", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/热河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "看见", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/看见.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "离婚", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/离婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "苍井空", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/苍井空.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "董卓瑶", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/董卓瑶.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", }, { name: "黑色信封", author: "看见", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/看见/cover2.png", },
+  ];
+    let songList21 = [{ name: "卡夫卡", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/卡夫卡.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "欢愉", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/欢愉.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "离婚", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/离婚.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "红色气球", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/红色气球.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "罗庄的冬天", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/罗庄的冬天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "被禁忌的游戏", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/被禁忌的游戏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "阿兰", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/阿兰.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", }, { name: "黑色信封", author: "被禁忌的游戏", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/黑色信封.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/被禁忌的游戏/cover2.png", },
+  ];
+    let songList22 = [{ name: "交河", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/交河.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "人民不需要自由", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/人民不需要自由.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "他们", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/他们.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "和你在一起", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "喀纳斯", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/喀纳斯.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "妈妈", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/妈妈.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "我们不能失去信仰—献给刘艺", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/我们不能失去信仰—献给刘艺.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "李志- 这个世界会好吗", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/李志- 这个世界会好吗.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "海的女儿", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/海的女儿.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", }, { name: "翁庆年的六英镑", author: "这个世界会好吗", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/翁庆年的六英镑.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/这个世界会好吗/cover2.png", },
+  ];
+    let songList23 = [{ name: "一个夜晚---李志", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/一个夜晚---李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "两只HipHop山羊织毛衣", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/两只HipHop山羊织毛衣.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "妈妈", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/妈妈.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "帐号被人注销了 - 《一起摇摆》 李志团队", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/帐号被人注销了 - 《一起摇摆》 李志团队.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "撒娇 - 在劫难逃", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/撒娇 - 在劫难逃.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "撒娇 - 虎口脱险", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/撒娇 - 虎口脱险.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "李志-红色气球 (2009现场版)", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/李志-红色气球 (2009现场版).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "李志,卡列宁 - 突如其来的夏天", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/李志,卡列宁 - 突如其来的夏天.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "李志,梁颖 - 虎口脱险", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/李志,梁颖 - 虎口脱险.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "痛并快乐着", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/痛并快乐着.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "老钟 我和你在一起", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/老钟 我和你在一起.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "肖晨,陈小二 - 酒吧叙事体", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/肖晨,陈小二 - 酒吧叙事体.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "英俊的海 - 《公路之光》丨李志", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/英俊的海 - 《公路之光》丨李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "谁他妈没织过毛衣", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/谁他妈没织过毛衣.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "这个世界会好吗2015", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/这个世界会好吗2015.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "邵夷贝,黄昏", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/邵夷贝,黄昏.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "阿兰 2012.12.31", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/阿兰 2012.12.31.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", }, { name: "鹿港小镇 (Live)", author: "零碎", src: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/鹿港小镇 (Live).mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song@main/audio/零碎/cover.png", },
+  ];
+    let songList24 = [  { name: "一个夜晚 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/一个夜晚 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "关于郑州的记忆 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/关于郑州的记忆 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "卡夫卡 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/卡夫卡 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "死人 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/死人 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "热河 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/热河 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "爱 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/爱 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "看见 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/看见 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "离婚 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/离婚 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "翁庆年的六英镑 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/翁庆年的六英镑 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "董卓瑶 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/董卓瑶 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "鸵鸟 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/鸵鸟 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", }, { name: "鼠说 (相信未来版)-李志", author: "爵士乐与不插电", src: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/鼠说 (相信未来版)-李志.mp3", cover: "https://gcore.jsdelivr.net/gh/liveeeee/song2@master/爵士乐与不插电新编12首 (Li-Zhi Jazz and Unplugged 12 Songs)/cover.jpg", },];
+
+
+    let player = new skPlayer({
+        music: {
+            type: 'file',
+            //必需项,自配置文件方式指定填'file'
+            source: songList1
+        }
+    });
+    console.log(player)
+
+    function change(type) {
+        if (type === 1) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList1
+                }
+            })
+        }  if (type === 2) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList2
+                }
+            })
+        }
+        if (type === 3) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList3
+                }
+            })
+        }
+        if (type === 4) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList4
+                }
+            })
+        }
+        if (type === 5) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList5
+                }
+            })
+        }
+        if (type === 6) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList6
+                }
+            })
+        }
+        if (type === 7) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList7
+                }
+            })
+        }if (type === 8) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList8
+                }
+            })
+        }if (type === 9) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList9
+                }
+            })
+        }if (type === 10) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList10
+                }
+            })
+        }if (type === 11) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList11
+                }
+            })
+        }if (type === 12) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList12
+                }
+            })
+        }if (type === 13) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList13
+                }
+            })
+        }if (type === 14) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList14
+                }
+            })
+        }if (type === 15) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList15
+                }
+            })
+        }if (type === 16) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList16
+                }
+            })
+        }if (type === 17) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList17
+                }
+            })
+        }if (type === 18) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList18
+                }
+            })
+        }if (type === 19) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList19
+                }
+            })
+        }if (type === 20) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList20
+                }
+            })
+        }if (type === 21) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList21
+                }
+            })
+        }if (type === 22) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList22
+                }
+            })
+        }if (type === 23) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList23
+                }
+            })
+        }if (type === 24) {
+            player.destroy();
+            player = new skPlayer({
+                music: {
+                    type: 'file',
+                    //必需项,自配置文件方式指定填'file'
+                    source: songList24
+                }
+            })
+        }
+    }
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+
+  const options = {
+    
+  time: '0.5s', // default: '0.3s'
+  
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+
+}
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
+
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?3ad6fca87a5d80c93885c290b711ebc6";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    
+</body>
+</html>
